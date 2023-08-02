@@ -1,0 +1,49 @@
+/*Hacer una función que reciba como parámetros un vector de enteros y un número entero que indica la cantidad de componentes del vector, y que devuelva
+la posición que ocupa el valor mínimo contenido en ese vector*/
+#include <iostream>
+#include <ctime>
+#include <conio.h>
+#include <string.h>
+using namespace std;
+
+
+void cargarVector(int vecEnteros[],int tam);
+int valorMinimo(int vecEnteros[],int tam);
+
+int main(){
+    int const tam=5;
+    int vecEnteros[tam],minimo;
+
+    cargarVector(vecEnteros,tam);
+    minimo= valorMinimo(vecEnteros,tam);
+
+    cout<<endl;
+    cout<<"El valor minimo ocupa la posicion: "<<minimo<<endl;
+
+  return 0;
+}
+void cargarVector(int vecEnteros[],int tam){
+    cout<<" CARGAR ELEMENTOS DEL VECTOR "<<endl;
+    for(int x=0;x<tam;x++){
+        cout<<x+1<<". ";
+        cin>>vecEnteros[x];
+    }
+
+}
+int valorMinimo(int vecEnteros[],int tam){
+    int minimo,pos;
+    cout<<endl;
+    for(int x=0;x<tam;x++){
+        if(x==0){
+            minimo=vecEnteros[x];
+            pos=x+1;
+        }
+        if(minimo>vecEnteros[x]){
+            minimo=vecEnteros[x];
+            pos=x+1;
+        }
+         }
+    return pos;
+
+}
+
