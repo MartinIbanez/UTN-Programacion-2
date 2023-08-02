@@ -1,0 +1,46 @@
+/*Hacer una función que reciba como parámetros un vector de enteros y un número entero que indica la cantidad de componentes del vector, y que devuelva
+el valor máximo contenido en ese vector*/
+#include <iostream>
+#include <ctime>
+#include <conio.h>
+#include <string.h>
+using namespace std;
+
+void cargarVector(int vecEnteros[],int tam);
+int valorMaximo(int vecEnteros[],int tam);
+
+int main(){
+    int const tam=5;
+    int vecEnteros[tam],maximo;
+
+    cargarVector(vecEnteros,tam);
+    maximo= valorMaximo(vecEnteros,tam);
+
+    cout<<endl;
+    cout<<"El valor maximo es: "<<maximo<<endl;
+
+  return 0;
+}
+void cargarVector(int vecEnteros[],int tam){
+    cout<<" CARGAR ELEMENTOS DEL VECTOR "<<endl;
+    for(int x=0;x<tam;x++){
+        cout<<x+1<<". ";
+        cin>>vecEnteros[x];
+    }
+
+}
+int valorMaximo(int vecEnteros[],int tam){
+    int maximo;
+    cout<<endl;
+    for(int x=0;x<tam;x++){
+        if(x==0){
+            maximo=vecEnteros[x];
+        }
+        if(maximo<vecEnteros[x]){
+            maximo=vecEnteros[x];
+        }
+         }
+    return maximo;
+
+}
+
