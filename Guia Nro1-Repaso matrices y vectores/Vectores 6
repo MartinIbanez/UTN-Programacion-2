@@ -1,0 +1,49 @@
+/*Hacer una función que reciba como parámetros un vector de enteros de 10 elementos y un número entero, y que devuelva la posición si el número recibido
+existe en el vector, o -1 si no existe.*/
+#include <iostream>
+#include <ctime>
+#include <conio.h>
+#include <string.h>
+using namespace std;
+
+void cargarVector(int vecEnteros[],int tam);
+void valorBuscado(int vecEnteros[],int tam,int num);
+
+int main(){
+    int const tam=10;
+    int vecEnteros[tam],num;
+
+    cargarVector(vecEnteros,tam);
+    cout<<"Ingresar numero a buscar: ";
+    cin>>num;
+    valorBuscado(vecEnteros,tam,num);
+
+    cout<<endl;
+
+  return 0;
+}
+void cargarVector(int vecEnteros[],int tam){
+    cout<<" CARGAR ELEMENTOS DEL VECTOR "<<endl;
+    for(int x=0;x<tam;x++){
+        cout<<x+1<<". ";
+        cin>>vecEnteros[x];
+    }
+
+}
+void valorBuscado(int vecEnteros[],int tam,int num){
+    int buscado=num;
+    int pos=-1;
+    cout<<endl;
+    for(int x=0;x<tam;x++){
+        if(buscado==vecEnteros[x]){
+            pos=x+1;
+        }
+   }
+
+     if(pos>-1){
+        cout<<endl<<" Existe en la posicion: "<<pos<<" del Vector"<<endl;
+    }
+    else{
+        cout<<endl<<" "<<pos<<endl;
+    }
+}
