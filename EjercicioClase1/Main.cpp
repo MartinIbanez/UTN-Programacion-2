@@ -32,7 +32,7 @@ using namespace std;
 int main() {
     setlocale (LC_ALL,"Spanish");//PARA CARACTERES ESPECIALES.
     setlocale (LC_ALL,"C");
-    int const tam=2;
+    int const tam=5;
 
     int numMateria[tam];
     char materia [tam][20];
