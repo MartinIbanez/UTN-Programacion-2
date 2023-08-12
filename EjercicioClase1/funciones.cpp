@@ -108,12 +108,12 @@ void showItem(const char* text, int posx, int posy, bool select)
     setBackgroundColor(BLACK);
 }
 
-void cargarCadena(char materia[][20],int const tam,int pos){
+void cargarCadena(char materia[][20],int pos){
+    fflush(stdin);
 
-    for(int x=0;x<tam;x++){
-
+    cout<<" Ingrese Nombre de Materia: ";
       cin.getline(materia[pos],20,'\n');
-    }
+
 
 }
 
@@ -125,14 +125,15 @@ void cargarMaterias(int numMateria[],int const tam,char materia[][20]){
             cout<<x+1<<". Ingrese Numero de Materia: ";
             cin>>aux;
             numMateria[x]=aux;
-            cout<<"   Ingresar nombre de la Materia: ";
-            cargarCadena(materia,tam,pos);
+            //cout<<"   Ingresar nombre de la Materia: ";
+            cargarCadena(materia,pos);
             pos++;
             cout<<endl;
 
         }
 
 }
+
 
 
 void mostrarMaterias(int numMateria[],int const tam,char materia[][20]){
