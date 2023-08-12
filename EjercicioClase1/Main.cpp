@@ -32,23 +32,27 @@ using namespace std;
 int main() {
     setlocale (LC_ALL,"Spanish");//PARA CARACTERES ESPECIALES.
     setlocale (LC_ALL,"C");
+    int const tam=2;
 
-    char nombre[15];
+    int numMateria[tam];
+    char materia [tam][20];
+
+
+
+    float horasMaterias[tam]={0};
+    int diaMarzo[31]={0};
     int opcion;
     opcion=menu();
-    //cls();
-    //system("cls");
+
 
     while (opcion != 0)
         {
 
             switch (opcion)
                 {
-                case 1:
+            case 1:
                 system("cls");
-
-
-
+                    cargarMaterias(numMateria,tam,materia);
 
                 rlutil::locate(2,25);
                 cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
@@ -57,7 +61,61 @@ int main() {
                 rlutil::hidecursor();
                 anykey();
                 break;
-                case 2:
+
+            case 2:
+                    system("cls");
+                    mostrarMaterias(numMateria,tam,materia);
+
+                rlutil::locate(2,25);
+                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
+                cin.get();
+                system("cls");
+                rlutil::hidecursor();
+                anykey();
+
+                    break;
+            case 3:
+                    system("cls");
+
+                    cargarIngresos(diaMarzo,horasMaterias);
+
+
+                rlutil::locate(2,25);
+                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
+                cin.get();
+                system("cls");
+                rlutil::hidecursor();
+                anykey();
+
+                    break;
+            case 4:
+                    system("cls");
+
+                    buscarAccesos(horasMaterias,tam,materia);
+
+                rlutil::locate(2,25);
+                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
+                cin.get();
+                system("cls");
+                rlutil::hidecursor();
+                anykey();
+
+                    break;
+            case 5:
+                    system("cls");
+
+                    mayorAcceso(horasMaterias,tam);
+
+
+                rlutil::locate(2,25);
+                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
+                cin.get();
+                system("cls");
+                rlutil::hidecursor();
+                anykey();
+
+                    break;
+            case 6:
                     system("cls");
 
 
@@ -71,50 +129,7 @@ int main() {
                 anykey();
 
                     break;
-                case 3:
-                    system("cls");
 
-
-
-
-                rlutil::locate(2,25);
-                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
-                cin.get();
-                system("cls");
-                rlutil::hidecursor();
-                anykey();
-
-                    break;
-                case 4:
-                    system("cls");
-
-
-
-
-                rlutil::locate(2,25);
-                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
-                cin.get();
-                system("cls");
-                rlutil::hidecursor();
-                anykey();
-
-                    break;
-                case 5:
-                    system("cls");
-
-
-
-
-                rlutil::locate(2,25);
-                cout << "PRESIONE 'ENTER' PARA REGRESAR AL MENU";
-                cin.get();
-                system("cls");
-                rlutil::hidecursor();
-                anykey();
-
-                    break;
-                default:
-                    cout << "LA OPCION INGRESADA NO ESTA DISPONIBLE" << endl;
                 }
             opcion=menu();
         }
