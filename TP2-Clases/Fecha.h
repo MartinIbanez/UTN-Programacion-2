@@ -38,7 +38,7 @@ public:
     void agregarDias(int cantidadDias);
 
     void restarDia();
-
+    void Cargar();
 };
 
 
