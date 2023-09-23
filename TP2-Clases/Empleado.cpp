@@ -86,7 +86,7 @@ void cargarCadena(char *palabra, int tamano){
     int  Empleado::getCargo(){
     return _Cargo;
     }
-    
+
     Empleado::Empleado(int dni = 0, const char* nombre = "", const char* apellido = "",const char* domicilio = "", const char* email = "",Fecha fechaNacimiento = Fecha(), int cargo = 0){
 
     _dni = dni;
@@ -97,4 +97,31 @@ void cargarCadena(char *palabra, int tamano){
     _FechaNacimiento = fechaNacimiento;
     _Cargo = cargo;
 
+    }
+
+    void Empleado::cargarEmpleado(){
+    cout<<" DNI: ";
+    cin>>_dni;
+    cout<<" NOMBRE: ";
+    cargarCadena(_nombre,29);
+    cout<<" APELLIDO: ";
+    cargarCadena(_apellido,29);
+     cout<<" DOMICILIO: ";
+    cargarCadena(_domicilio,29);
+    cout<<" EMAIL: ";
+    cargarCadena(_email,39);
+    cout<<" FECHA DE NAC.: "<<endl;
+    _FechaNacimiento.Cargar();
+    cout<<" Cargo(1 al 10): ";
+    cin>>_Cargo;
+
+    }
+    void Empleado::mostrarEmpleado(){
+    cout<<" Dni:  "<<_dni<<endl;
+    cout<<" Nombre:  "<<_nombre<<endl;
+    cout<<" Apellido:  "<<_apellido<<endl;
+    cout<<" Domicilio:  "<<_domicilio<<endl;
+    cout<<" Email:  "<<_email<<endl;
+    cout<<" Fecha Nac.:  "<<_FechaNacimiento.toString()<<endl;
+    cout<<" Cargo:  "<<_Cargo<<endl;
     }
