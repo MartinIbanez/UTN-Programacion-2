@@ -147,3 +147,12 @@ void Fecha::restarDia(){
 
         }
 }
+void Fecha::Cargar(){
+            cout<<"DIA: ";
+            cin>>_dia;
+            cout<<"MES: ";
+            cin>>_mes;
+            cout<<"ANIO: ";
+            cin>>_anio;
+        }
+
