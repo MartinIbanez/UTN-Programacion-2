@@ -33,24 +33,7 @@ public:
     Fecha getFechaNacimiento();
     int getCargo();
 
-    void cargarEmpleado(){
-    cout<<"DNI: ";
-    cin>>_dni;
-    cout<<"NOMBRE: ";
-    cin>>_nombre;
-    cout<<"APELLIDO: ";
-    cin>>_apellido;
-     cout<<"DOMICILIO: ";
-    cin>>_domicilio;
-    cout<<"EMAIL: ";
-    cin>>_email;
-    cout<<"FECHA DE NACIMIENTO: ";
-    
-    cout<<"Cargo: ";
-    cin>>_Cargo;
-
-
-    }
+    void cargarEmpleado();
     void mostrarEmpleado();
 
 
@@ -58,3 +41,4 @@ public:
 };
 
 #endif // EMPLEADO_H
+
