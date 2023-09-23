@@ -17,17 +17,17 @@ int main(){
 
     int opcion;
     bool repetir=true;
-    Empleado emple[5];
+    Empleado emple[1];
 
 
 
     while (repetir=true) {
-        cout << endl << "            EMPRESA TECNOLOGICA" << endl << endl;
-        cout << "  1. CARGAR EMPLEADOS" << endl;
-        cout << "  2. MOSTRAR EMPLEADOS" << endl;
-        cout << "  0. SALIR DEL PROGRAMA" << endl;
+        cout << endl << "        -------   EMPRESA TECNOLOGICA   -------" << endl << endl;
+        cout <<"                 1. CARGAR EMPLEADOS" << endl;
+        cout <<"                 2. MOSTRAR EMPLEADOS" << endl;
+        cout <<"                 0. SALIR DEL PROGRAMA" << endl;
 
-        cout << endl << "INGRESAR OPCION DESEADA: ";
+        cout << endl <<"  INGRESAR OPCION DESEADA: ";
         cin >> opcion;
         system("cls");
         switch (opcion) {
@@ -35,23 +35,42 @@ int main(){
                 system("cls");
                 cout<<"  Cantidad de empleados = 5 "<<endl;
 
-                for(int x=0;x<5;x++){
+                for(int x=0;x<1;x++){
                     emple[x].cargarEmpleado();
 
                 }
+                cout<<endl<<endl<<endl;
+                cout<<"             FIN DE LA CARGA DE EMPLEADOS"<<endl<<endl<<endl;
                 cout << "Presiona Enter para continuar...";
-                cin.get(); 
-                
+                getch();
+
                 system("cls");
 
                 break;
 
             case 2:
-                
+                system("cls");
+                cout<<"  Listado de Empleados = 5 "<<endl;
+
+                for(int x=0;x<1;x++){
+                    emple[x].mostrarEmpleado();
+
+                }
+                cout<<endl<<endl<<endl;
+                cout << "Presiona Enter para continuar...";
+                getch();
+
+                system("cls");
+
                 break;
 
             case 0:
-                repetir = false; // Salir del programa
+
+                cout<<endl<<endl<<endl<<endl;
+                cout <<"  Presiona Enter para continuar...";
+                cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;;
+                return 0; // Salir del programa
+                cout <<" Presiona Enter para continuar...";
                 break;
 
             default:
