@@ -14,6 +14,7 @@ private:
 public:
 
    Empleado(int dni, const char* nombre, const char* apellido,const char* domicilio, const char* email,Fecha fechaNacimiento, int cargo);
+   Empleado(){};
 
     void setDni(int d);
     void setNombre(char *n);
@@ -31,8 +32,25 @@ public:
     const char *getEmail();
     Fecha getFechaNacimiento();
     int getCargo();
+
+    void cargarEmpleado(){
+    cout<<"DNI: ";
+    cin>>_dni;
+    cout<<"NOMBRE: ";
+    cin>>_nombre;
+    cout<<"APELLIDO: ";
+    cin>>_apellido;
+     cout<<"DOMICILIO: ";
+    cin>>_domicilio;
+    cout<<"EMAIL: ";
+    cin>>_email;
+    cout<<"FECHA DE NACIMIENTO: ";
     
-    void cargarEmpleado();
+    cout<<"Cargo: ";
+    cin>>_Cargo;
+
+
+    }
     void mostrarEmpleado();
 
 
